@@ -17,8 +17,7 @@ env:
   MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0
   MANIFEST_BRANCH: v3_9.0
   DEVICE: a70q
-  DT_LINK: https://github.com/aswin11234/android_device_samsung_a70q-twrp -b 
-  DT_BRANCH: SHRP
+  DT_LINK: https://github.com/aswin11234/android_device_samsung_a70q-twrp
   DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
   TZ: Asia/Kuching
