@@ -17,10 +17,10 @@ env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
   DEVICE: a70q
-  DT_LINK: https://github.com/aswin11234/android_device_samsung_a70q-twrp 
+  DT_LINK: https://github.com/aswin11234/android_device_samsung_a70q-twrp
   DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
-  TZ: Kl/Malaysia
+  TZ: Asia/Kuching
 
 jobs:
   build:
