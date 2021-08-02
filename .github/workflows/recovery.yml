@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
-  MANIFEST_BRANCH: android-9.0
-  DEVICE: a50dd
-  DT_LINK: https://github.com/aswin11234/android_device_samsung_a50dd
-  DT_PATH: device/samsung/a50dd
+  MANIFEST: git://github.com/PterodonRecovery/manifest.git -b master
+  MANIFEST_BRANCH: master
+  DEVICE: a70
+  DT_LINK: https://github.com/aswin11234/android_device_samsung_a70q-twrp
+  DT_PATH: device/samsung/a70
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
