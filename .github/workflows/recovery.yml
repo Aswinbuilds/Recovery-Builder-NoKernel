@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
-  MANIFEST_BRANCH: fox_9.0
-  DEVICE: a50dd
-  DT_LINK: https://github.com/aswin11234/android_device_samsung_a50dd
-  DT_PATH: device/samsung/a50dd
+  MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0
+  MANIFEST_BRANCH: v3_9.0
+  DEVICE: a52q
+  DT_LINK: https://github.com/aswin11234/android_device_samsung_a52q
+  DT_PATH: device/samsung/a52q
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
