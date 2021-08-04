@@ -14,8 +14,8 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
-  MANIFEST_BRANCH: android-9.0
+  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+  MANIFEST_BRANCH: fox_9.0
   DEVICE: a50dd
   DT_LINK: https://github.com/aswin11234/android_device_samsung_a50dd
   DT_PATH: device/samsung/a50dd
