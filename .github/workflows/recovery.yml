@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-10.0
+  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git
   MANIFEST_BRANCH: android-10.0
   DEVICE: exynos9611
   DT_LINK: https://gitlab.com/aswin11234/exynos9611.git
