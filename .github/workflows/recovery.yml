@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git
-  MANIFEST_BRANCH: v3_9.0
-  DEVICE: a30
-  DT_LINK: https://github.com/aswin11234/twrp_device_samsung_a30
-  DT_PATH: device/samsung/a30
+  MANIFEST_BRANCH: v3_10.0
+  DEVICE: mojito
+  DT_LINK: https://github.com/aswin11234/device_xiaomi_mojito-TWRP.git
+  DT_PATH: device/xiaomi/mojito
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
