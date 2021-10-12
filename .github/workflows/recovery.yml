@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git
-  MANIFEST_BRANCH: v3_9.0
-  DEVICE: a70q
-  DT_LINK: https://github.com/SHRP-Devices/device-samsung-a70q
-  DT_PATH: device/samsung/a70q
+  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
+  MANIFEST_BRANCH: android-11.0
+  DEVICE: courbet
+  DT_LINK: https://github.com/dotAbuilds/device_xiaomi_courbet_TWRP
+  DT_PATH: device/xiaomi/courbet
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
