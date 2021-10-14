@@ -15,7 +15,7 @@ on:
 
 env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
-  MANIFEST_BRANCH: android-7.0
+  MANIFEST_BRANCH: android-9.0
   DEVICE: whyred
   DT_LINK: https://github.com/aswin11234/android_device_xiaomi_whyred-pbrp
   DT_PATH: device/xiaomi/whyred
