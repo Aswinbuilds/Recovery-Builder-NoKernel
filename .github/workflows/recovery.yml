@@ -17,7 +17,7 @@ env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
   MANIFEST_BRANCH: android-9.0
   DEVICE: whyred
-  DT_LINK: https://github.com/aswin11234/android_device_xiaomi_whyred-pbrp
+  DT_LINK: https://github.com/dotAbuilds/twrp_device_xiaomi_whyred
   DT_PATH: device/xiaomi/whyred
   TARGET: recoveryimage
   TZ: Asia/Kuching
