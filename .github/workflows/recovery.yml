@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
   MANIFEST_BRANCH: android-9.0
-  DEVICE: whyred
-  DT_LINK: https://github.com/dotAbuilds/twrp_device_xiaomi_whyred
-  DT_PATH: device/xiaomi/whyred
+  DEVICE: m30s
+  DT_LINK: https://github.com/dotAbuilds/android_device_samsung_m30s
+  DT_PATH: device/samsung/m30s
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
