@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
-  MANIFEST_BRANCH: android-10.0
-  DEVICE: courbet
-  DT_LINK: https://github.com/dotAbuilds/device_xiaomi_courbet_TWRP
-  DT_PATH: device/xiaomi/courbet
+  MANIFEST_BRANCH: android-9.0
+  DEVICE: m30s
+  DT_LINK: https://github.com/dotAbuilds/android_device_samsung_m30s
+  DT_PATH: device/samsung/m30s
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
