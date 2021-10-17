@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb
-  MANIFEST_BRANCH: android-9.0
-  DEVICE: m30s
-  DT_LINK: https://github.com/dotAbuilds/android_device_samsung_m30s
-  DT_PATH: device/samsung/m30s
+  MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git
+  MANIFEST_BRANCH: v3_9.0
+  DEVICE: a20s
+  DT_LINK: https://github.com/aswin11234/device_samsung_a20s
+  DT_PATH: device/samsung/a20s
   TARGET: recoveryimage
   TZ: Asia/Kuching
 
