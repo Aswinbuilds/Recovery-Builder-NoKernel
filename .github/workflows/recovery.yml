@@ -21,10 +21,11 @@ env:
   DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
   TZ: Asia/Kuching
-  VARIANT= SHRP
-  BUILD_TYPE= TEST
-  TOKEN=$TELEGRAM_TOKEN
-  CHATID=$TELEGRAM_CHATID
+  VARIANT: SHRP
+  BUILD_TYPE: TEST
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+  TELEGRAM_CHATID: ${{ secrets.TELEGRAM_CHATID }}
+  
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -47,7 +48,11 @@ jobs:
             sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex curl  bison aria2
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
-            
+
+        - name: Build kernel 
+          run: |
+              bash config.sh    
+
        - name: Sync recovery source and device tree
          run: |
              mkdir work
