@@ -23,6 +23,8 @@ env:
   TZ: Asia/Kuching
   VARIANT= SHRP
   BUILD_TYPE= TEST
+  TOKEN=$TELEGRAM_TOKEN
+  CHATID=$TELEGRAM_CHATID
 jobs:
   build:
     runs-on: ubuntu-18.04
