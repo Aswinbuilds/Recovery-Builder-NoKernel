@@ -50,8 +50,7 @@ jobs:
             sudo chmod a+rx /usr/local/bin/repo
 
        - name: Setup Bot
-          run: |
-              bash config.sh    
+          run: bash config.sh    
 
        - name: Sync recovery source and device tree
          run: |
@@ -62,8 +61,7 @@ jobs:
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
      
        - name: Notify build
-          run: |
-              bash notify.sh 
+          run: bash notify.sh 
      
        - name: Build
          run: |
