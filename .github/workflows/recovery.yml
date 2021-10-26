@@ -21,7 +21,8 @@ env:
   DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
   TZ: Asia/Kuching
-
+  VARIANT= SHRP
+  BUILD_TYPE= TEST
 jobs:
   build:
     runs-on: ubuntu-18.04
