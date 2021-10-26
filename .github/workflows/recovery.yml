@@ -21,10 +21,6 @@ env:
   DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
   TZ: Asia/Kuching
-  VARIANT: SHRP
-  BUILD_TYPE: TEST
-  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-  TELEGRAM_CHATID: ${{ secrets.TELEGRAM_CHATID }}
   
 jobs:
   build:
@@ -49,9 +45,6 @@ jobs:
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
 
-       - name: Setup Bot
-          run: bash config.sh    
-
        - name: Sync recovery source and device tree
          run: |
              mkdir work
@@ -59,10 +52,7 @@ jobs:
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
-     
-       - name: Notify build
-          run: bash notify.sh 
-     
+         
        - name: Build
          run: |
               cd work
