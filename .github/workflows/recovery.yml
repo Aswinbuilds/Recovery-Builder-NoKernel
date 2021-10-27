@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git
   MANIFEST_BRANCH: v3_9.0
-  DEVICE: a20e
-  DT_LINK: https://github.com/dotAbuilds/android_device_samsung_a20e
-  DT_PATH: device/samsung/a20e
+  DEVICE: a30lte
+  DT_LINK: https://github.com/dotAbuilds/android_device_samsung_m30lte
+  DT_PATH: device/samsung/m30lte
   TARGET: recoveryimage
   TZ: Asia/Kuching
   
