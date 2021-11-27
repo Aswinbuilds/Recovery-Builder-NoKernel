@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git
-  MANIFEST_BRANCH: v3_9.0
-  DEVICE: a30
-  DT_LINK: https://github.com/Aswinbuilds/android_device_samsung_a30
-  DT_PATH: device/samsung/a30
+  MANIFEST: git://github.com/SHRP/manifest.git
+  MANIFEST_BRANCH: v3_11.0
+  DEVICE: courbet
+  DT_LINK: https://github.com/Aswinbuilds/device_xiaomi_courbet_TWRP
+  DT_PATH: device/xiaomi/courbet
   TARGET: recoveryimage
   TZ: Asia/Kuching
   
@@ -50,7 +50,7 @@ jobs:
              mkdir work
              cd work
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
-             repo sync -c -f --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j4
+             repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
          
        - name: Build
