@@ -21,6 +21,7 @@ env:
   DT_PATH: device/xiaomi/courbet
   TARGET: recoveryimage
   TZ: Asia/Kuching
+  BOTTOKEN: ${{ secrets.bottoken }}
   
 jobs:
   build:
@@ -58,12 +59,7 @@ jobs:
               cd work
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
-       - uses: actions/upload-artifact@v2
-         with:
-          name: recoveryzip
-          path: work/out/target/product/*/*.zip
-
-       - uses: actions/upload-artifact@v2
-         with:
-          name: recoveryimage
-          path: work/out/target/product/*/*.img
+       - name: Upload to tg
+         run: |
+              cd work/out/target/product/$DEVICE/
+              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427
