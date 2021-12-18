@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: git://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_11.0
-  DEVICE: courbet
-  DT_LINK: https://github.com/Aswinbuilds/device_xiaomi_courbet_TWRP
-  DT_PATH: device/xiaomi/courbet
+  MANIFEST_BRANCH: v3_9.0
+  DEVICE: a70q
+  DT_LINK: https://github.com/SHRP-Devices/device-samsung-a70q
+  DT_PATH: device/samsung/a70q
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
