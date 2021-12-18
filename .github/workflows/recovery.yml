@@ -22,7 +22,8 @@ env:
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
-  
+  PREFIX: omni  
+
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -57,7 +58,7 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh &&lunch $PREFIX_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
        - name: Upload to tg
          run: |
