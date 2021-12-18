@@ -62,4 +62,4 @@ jobs:
        - name: Upload to tg
          run: |
               cd work/out/target/product/$DEVICE/
-              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427
+              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427; done
