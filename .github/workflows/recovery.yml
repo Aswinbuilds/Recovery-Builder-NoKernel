@@ -17,7 +17,7 @@ env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git
   MANIFEST_BRANCH: android-9.0
   DEVICE: a10
-  DT_LINK: https://github.com/SHRP-Devices/device-samsung-a10
+  DT_LINK: https://github.com/SHRP-Devices/device_samsung_a10
   DT_PATH: device/samsung/a10
   TARGET: recoveryimage
   TZ: Asia/Kuching
