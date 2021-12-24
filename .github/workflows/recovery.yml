@@ -14,15 +14,15 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_11.0
-  DEVICE: alioth
-  DT_LINK: https://github.com/SHRP-Devices/device-samsung-a70q
-  DT_PATH: device/xiaomi/alioth
+  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git
+  MANIFEST_BRANCH: android-9.0
+  DEVICE: a10
+  DT_LINK: https://github.com/SHRP-Devices/device-samsung-a10
+  DT_PATH: device/samsung/a10
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
-  PREFIX: twrp
+  PREFIX: omni
 
 jobs:
   build:
@@ -54,7 +54,8 @@ jobs:
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
-         
+             sudo ln -sf /usr/bin/python2 /usr/bin/python
+
        - name: Build
          run: |
               cd work
