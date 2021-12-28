@@ -58,9 +58,9 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch $PREFIX_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh &&lunch twrp_lisa-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka bootimage
              
        - name: Upload to tg
          run: |
-              cd work/out/target/product/$DEVICE/
+              cd work/out/target/product/lisa/
               for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427; done
