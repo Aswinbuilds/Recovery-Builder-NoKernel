@@ -14,15 +14,14 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git
-  MANIFEST_BRANCH: android-9.0
-  DEVICE: a10
-  DT_LINK: https://github.com/SHRP-Devices/device_samsung_a10
-  DT_PATH: device/samsung/a10
-  TARGET: recoveryimage
+  MANIFEST: git://github.com/SHRP/manifest.git
+  MANIFEST_BRANCH: v3_11.0
+  DEVICE: lisa
+  DT_LINK: https://github.com/Aswinbuilds/android_device_xiaomi_lisa
+  DT_PATH: device/xiaomi/lisa
+  TARGET: bootimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
-  PREFIX: omni
 
 jobs:
   build:
