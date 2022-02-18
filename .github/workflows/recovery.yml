@@ -15,11 +15,11 @@ on:
 
 env:
   MANIFEST: git://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_11.0
-  DEVICE: lisa
-  DT_LINK: https://github.com/Aswinbuilds/android_device_xiaomi_lisa
-  DT_PATH: device/xiaomi/lisa
-  TARGET: bootimage
+  MANIFEST_BRANCH: v3_10.0
+  DEVICE: angelica
+  DT_LINK: https://github.com/aswin11234/device_xiaomi_angelica-shrp
+  DT_PATH: device/xiaomi/angelica
+  TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
 
@@ -58,9 +58,9 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_lisa-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka bootimage
+              . build/envsetup.sh &&lunch omni_angelica-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
              
        - name: Upload to tg
          run: |
-              cd work/out/target/product/lisa/
+              cd work/out/target/product/angelica/
               for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427; done
