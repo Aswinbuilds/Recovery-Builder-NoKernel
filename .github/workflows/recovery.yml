@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/SHRP/manifest.git
+  MANIFEST: https://github.com/SHRP/manifest.git
   MANIFEST_BRANCH: v3_11.0
   DEVICE: f62
   DT_LINK: https://github.com/aswin11234/device_samsung_f62
