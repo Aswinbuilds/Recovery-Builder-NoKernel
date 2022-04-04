@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: git://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_10.0
-  DEVICE: angelica
-  DT_LINK: https://github.com/aswin11234/device_xiaomi_angelica-shrp
-  DT_PATH: device/xiaomi/angelica
+  MANIFEST_BRANCH: v3_11.0
+  DEVICE: f62
+  DT_LINK: https://github.com/aswin11234/device_samsung_f62
+  DT_PATH: device/samsung/f62
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
@@ -58,9 +58,9 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch omni_angelica-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
+              . build/envsetup.sh &&lunch twrp_f62-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
              
        - name: Upload to tg
          run: |
-              cd work/out/target/product/angelica/
-              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001556491427; done
+              cd work/out/target/product/f62/
+              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001774055317; done
