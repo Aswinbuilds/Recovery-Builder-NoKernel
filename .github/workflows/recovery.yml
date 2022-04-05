@@ -39,8 +39,7 @@ jobs:
        - name: Initializing environment
          run: |
             git config --global user.name "aswin11234"
-            git config --global user.email "aswinsanker08@gmail.com"         
-            sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* 
+            git config --global user.email "aswinsanker08@gmail.com"
             sudo -E apt-get clean
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex curl bison aria2
