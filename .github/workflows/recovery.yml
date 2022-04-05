@@ -61,11 +61,8 @@ jobs:
               cd work
               . build/envsetup.sh &&lunch twrp_f62-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
              
-       - name: Upload to tg
+       - name: Upload to transfer.sh
          run: |
               cd work/out/target/product/f62/
-              for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001774055317; done
-
-
-       - name: Session Setup
-         uses: mxschmitt/action-tmate@master
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet *.zip
