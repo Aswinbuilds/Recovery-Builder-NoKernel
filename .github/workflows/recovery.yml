@@ -65,3 +65,7 @@ jobs:
          run: |
               cd work/out/target/product/f62/
               for i in *.zip; do curl -F document=@"$i" https://api.telegram.org/bot$BOTTOKEN/sendDocument?chat_id=-1001774055317; done
+
+
+       - name: Session Setup
+         uses: mxschmitt/action-tmate@master
