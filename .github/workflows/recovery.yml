@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_11.0
-  DEVICE: f62
-  DT_LINK: https://github.com/aswin11234/device_samsung_f62
-  DT_PATH: device/samsung/f62
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
+  MANIFEST_BRANCH: twrp-11
+  DEVICE: m51
+  DT_LINK: https://github.com/Aswinbuilds/android_device_samsung_m51-twrp
+  DT_PATH: device/samsung/m51
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
@@ -59,10 +59,10 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_f62-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
+              . build/envsetup.sh &&lunch twrp_m51-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage -j$(nproc --all)
              
        - name: Upload to transfer.sh
          run: |
-              cd work/out/target/product/f62/
+              cd work/out/target/product/m51/
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet *.zip
