@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  MANIFEST_BRANCH: twrp-11
-  DEVICE: m51
-  DT_LINK: https://github.com/Aswinbuilds/android_device_samsung_m51-twrp
-  DT_PATH: device/samsung/m51
+  MANIFEST: https://github.com/PitchBlackRecoveryProject/manifest_pb.git
+  MANIFEST_BRANCH: android-9.0
+  DEVICE: a10s
+  DT_LINK: https://github.com/aswin11234/device_samsung_a10s-pbrp
+  DT_PATH: device/samsung/a10s
   TARGET: recoveryimage
   TZ: Asia/Kuching
   BOTTOKEN: ${{ secrets.bottoken }}
@@ -59,10 +59,10 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_m51-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage -j$(nproc --all)
+              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET -j$(nproc --all)
              
        - name: Upload to transfer.sh
          run: |
-              cd work/out/target/product/m51/
+              cd work/out/target/product/a10s/
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet *.zip
